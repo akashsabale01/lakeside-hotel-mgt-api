@@ -7,10 +7,12 @@ using LakeSideHotelApi.Models.DTOs;
 using LakeSideHotelApi.Repositories;
 using System.Text;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace LakeSideHotelApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookedRoomController : ControllerBase

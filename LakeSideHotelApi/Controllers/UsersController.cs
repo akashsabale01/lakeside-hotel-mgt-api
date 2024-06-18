@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LakeSideHotelApi.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase

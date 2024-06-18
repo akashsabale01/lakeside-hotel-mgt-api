@@ -1,6 +1,7 @@
 ﻿using LakeSideHotelApi.Models.DTO;
 using LakeSideHotelApi.Models.Entities;
 using LakeSideHotelApi.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -11,6 +12,7 @@ using System.Text;
 
 namespace LakeSideHotelApi.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : Controller

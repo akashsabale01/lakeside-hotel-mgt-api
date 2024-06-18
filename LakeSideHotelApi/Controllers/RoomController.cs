@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LakeSideHotelApi.Models.Entities;
 using LakeSideHotelApi.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LakeSideHotelApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RoomController : ControllerBase
